@@ -1,74 +1,92 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 
-const Nav = styled.nav`
+const NavbarContainer = styled.nav`
   width: 100%;
-  background: linear-gradient(90deg, #232526 0%, #414345 100%);
-  box-shadow: 0 2px 16px rgba(0,0,0,0.10);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-`;
-
-const NavContainer = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
+  background: linear-gradient(90deg, #1b0033 0%, #0b001a 100%);
+  color: #fff;
+  padding: 0.8rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.2rem 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 24px #1b003333;
 `;
 
-const Logo = styled.a`
-  font-size: 2rem;
-  font-weight: bold;
-  color: #f8fafc;
+const Logo = styled.div`
+  font-size: 1.7rem;
+  font-weight: 700;
   letter-spacing: 2px;
-  text-decoration: none;
-  background: linear-gradient(90deg, #ff6e7f 0%, #bfe9ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #00e5ff;
+  text-shadow: 0 0 8px #ff00ff;
 `;
 
 const NavLinks = styled.ul`
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (max-width: 700px) {
+    gap: 1rem;
+    font-size: 1rem;
+  }
 `;
 
-const NavLink = styled.a`
-  color: #e0eafc;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  padding: 0.3rem 0.7rem;
-  border-radius: 8px;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  &:hover {
-    background: linear-gradient(90deg, #ff6e7f 0%, #bfe9ff 100%);
-    color: #232526;
-    box-shadow: 0 2px 8px rgba(255,110,127,0.10);
+const NavLink = styled.li`
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+    &:hover {
+      color: #00e5ff;
+    }
+  }
+`;
+
+const SocialLinks = styled.div`
+  display: flex;
+  gap: 1.2rem;
+
+  a {
+    color: #fff;
+    font-size: 1.3rem;
+    transition: color 0.2s, transform 0.2s;
+    &:hover {
+      color: #ff00ff;
+      transform: scale(1.2);
+    }
   }
 `;
 
 const Navbar = () => (
-  <Nav>
-    <NavContainer>
-      <Logo href="#home">Sewwandi</Logo>
-      <NavLinks>
-        <li><NavLink href="#home">Home</NavLink></li>
-        <li><NavLink href="#skills">Skills</NavLink></li>
-        <li><NavLink href="#projects">Projects</NavLink></li>
-        <li><NavLink href="#experience">Experience</NavLink></li>
-        <li><NavLink href="#about">About</NavLink></li>
-        <li><NavLink href="#contact">Contact</NavLink></li>
-      </NavLinks>
-    </NavContainer>
-  </Nav>
+  <NavbarContainer>
+    <Logo>Sewwandi</Logo>
+    <NavLinks>
+      <NavLink><a href="#home">Home</a></NavLink>
+      <NavLink><a href="#about">About</a></NavLink>
+      <NavLink><a href="#skills">Skills</a></NavLink>
+      <NavLink><a href="#projects">Projects</a></NavLink>
+      <NavLink><a href="#contact">Contact</a></NavLink>
+    </NavLinks>
+    <SocialLinks>
+      <a href="https://github.com/sewwandi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <FaGithub />
+      </a>
+      <a href="https://www.linkedin.com/in/chathurika-sewwandi-355b9634a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <FaLinkedin />
+      </a>
+      <a href="https://www.facebook.com/chathurika.sewwandi.liyanage.2025?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <FaFacebook />
+      </a>
+    </SocialLinks>
+  </NavbarContainer>
 );
 
 export default Navbar;

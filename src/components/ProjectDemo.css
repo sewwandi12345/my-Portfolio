@@ -1,0 +1,37 @@
+.projects-section {
+  background: #0a0227; /* Dark purple background */
+}
+
+.section-title {
+  color: #fff;
+  font-weight: bold;
+}
+
+.project-card h5 {
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.project-card .links {
+  font-size: 0.95rem;
+  margin-top: 0.3rem;
+}
+
+.live-link {
+  color: #ffd700; /* Yellow for Live Preview */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.live-link:hover {
+  text-decoration: underline;
+}
+
+.source-link {
+  color: #9abaff; /* Light blue for Request Source Code */
+  text-decoration: none;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}

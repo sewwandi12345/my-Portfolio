@@ -1,7 +1,7 @@
 body {
+  background-color: #f1f5f9; /* slate-100 */
+  color: #1e293b; /* gray-900 */
   margin: 0;
   padding: 0;
   font-family: 'Inter', Arial, Helvetica, sans-serif;
-  background: #f8f9fa;
-  color: #222;
 }

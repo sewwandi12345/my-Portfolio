@@ -32,4 +32,4 @@ npm run build
 
 ---
 
-*This project uses placeholder images and content. Replace them with your own for a personalized portfolio!*
+

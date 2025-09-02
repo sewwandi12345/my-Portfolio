@@ -1,11 +1,16 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import Home from './components/Home';
-import Projects from './components/Projects';
+import ProjectsDemo from './components/ProjectsDemo';
 import About from './components/About';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Navbar from './components/Navbar';
+import Footer from "./components/Footer";
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -30,9 +35,12 @@ function App() {
       <Navbar />
       <Home />
       <Skills />
-      <Projects />
+      <ProjectsDemo />
       <About />
+    
       <Contact />
+      <Footer/>
+      
     </AppContainer>
   );
 }
